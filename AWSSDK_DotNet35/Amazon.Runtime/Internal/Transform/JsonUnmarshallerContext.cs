@@ -248,7 +248,7 @@ namespace Amazon.Runtime.Internal.Transform
         /// <summary>
         /// The type of the current token
         /// </summary>
-        internal JsonToken CurrentTokenType
+        public JsonToken CurrentTokenType
         {
             get { return currentToken.Value; }
         }
