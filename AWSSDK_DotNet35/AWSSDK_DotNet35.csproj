@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{65A7C180-38A6-48F7-B9A9-3D0322E5DEAF}</ProjectGuid>
+    <ProjectGuid>{40E91E2D-70F3-463D-9E3E-408AE2A70BA8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AWSSDK</RootNamespace>
@@ -147,6 +147,9 @@
     <Compile Include="Amazon.AutoScaling\Model\AlreadyExistsException.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Amazon.AutoScaling\Model\AmazonAutoScalingRequest.cs" />
+    <Compile Include="Amazon.AutoScaling\Model\AttachInstancesRequest.cs" />
+    <Compile Include="Amazon.AutoScaling\Model\AttachInstancesResponse.cs" />
     <Compile Include="Amazon.AutoScaling\Model\AutoScalingGroup.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -210,6 +213,9 @@
     <Compile Include="Amazon.AutoScaling\Model\DeleteTagsResponse.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Amazon.AutoScaling\Model\DescribeAccountLimitsRequest.cs" />
+    <Compile Include="Amazon.AutoScaling\Model\DescribeAccountLimitsResponse.cs" />
+    <Compile Include="Amazon.AutoScaling\Model\DescribeAccountLimitsResult.cs" />
     <Compile Include="Amazon.AutoScaling\Model\DescribeAdjustmentTypesRequest.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -363,6 +369,8 @@
     <Compile Include="Amazon.AutoScaling\Model\Internal\MarshallTransformations\AlarmUnmarshaller.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Amazon.AutoScaling\Model\Internal\MarshallTransformations\AttachInstancesRequestMarshaller.cs" />
+    <Compile Include="Amazon.AutoScaling\Model\Internal\MarshallTransformations\AttachInstancesResponseUnmarshaller.cs" />
     <Compile Include="Amazon.AutoScaling\Model\Internal\MarshallTransformations\AutoScalingGroupUnmarshaller.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -426,6 +434,8 @@
     <Compile Include="Amazon.AutoScaling\Model\Internal\MarshallTransformations\DeleteTagsResponseUnmarshaller.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Amazon.AutoScaling\Model\Internal\MarshallTransformations\DescribeAccountLimitsRequestMarshaller.cs" />
+    <Compile Include="Amazon.AutoScaling\Model\Internal\MarshallTransformations\DescribeAccountLimitsResponseUnmarshaller.cs" />
     <Compile Include="Amazon.AutoScaling\Model\Internal\MarshallTransformations\DescribeAdjustmentTypesRequestMarshaller.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -721,6 +731,7 @@
     <Compile Include="Amazon.AWSSupport\Model\AddCommunicationToCaseRequest.cs" />
     <Compile Include="Amazon.AWSSupport\Model\AddCommunicationToCaseResponse.cs" />
     <Compile Include="Amazon.AWSSupport\Model\AddCommunicationToCaseResult.cs" />
+    <Compile Include="Amazon.AWSSupport\Model\AmazonAWSSupportRequest.cs" />
     <Compile Include="Amazon.AWSSupport\Model\CaseCreationLimitExceededException.cs" />
     <Compile Include="Amazon.AWSSupport\Model\CaseDetails.cs" />
     <Compile Include="Amazon.AWSSupport\Model\CaseIdNotFoundException.cs" />
@@ -6093,6 +6104,10 @@
     <Compile Include="Amazon.Glacier\AmazonGlacierExtensions.cs" />
     <Compile Include="Amazon.Glacier\GlacierUtils.cs" />
     <Compile Include="Amazon.Glacier\IAmazonGlacier.cs" />
+    <Compile Include="Amazon.Glacier\Model\AmazonGlacierRequest.cs" />
+    <Compile Include="Amazon.Glacier\Model\Internal\MarshallTransformations\InventoryRetrievalJobDescriptionUnmarshaller.cs" />
+    <Compile Include="Amazon.Glacier\Model\InventoryRetrievalJobDescription.cs" />
+    <Compile Include="Amazon.Glacier\Model\InventoryRetrievalJobInput.cs" />
     <Compile Include="Amazon.Glacier\ServiceEnumerations.cs" />
     <Compile Include="Amazon.Glacier\Transfer\ArchiveTransferManager.cs" />
     <Compile Include="Amazon.Glacier\Model\AbortMultipartUploadRequest.cs" />
@@ -10263,9 +10278,11 @@
     <Compile Include="Amazon.SecurityToken\ServiceEnumerations.cs" />
     <Compile Include="Amazon.SimpleDB\ServiceEnumerations.cs" />
     <Compile Include="Amazon.SimpleEmail\IAmazonSimpleEmailService.cs" />
+    <Compile Include="Amazon.SimpleEmail\Model\AmazonSimpleEmailServiceRequest.cs" />
     <Compile Include="Amazon.SimpleEmail\ServiceEnumerations.cs" />
     <Compile Include="Amazon.SimpleNotificationService\AmazonSimpleNotificationServiceClient.Extensions.cs" />
     <Compile Include="Amazon.SimpleNotificationService\IAmazonSimpleNotificationService.Extensions.cs" />
+    <Compile Include="Amazon.SimpleNotificationService\Model\AmazonSimpleNotificationServiceRequest.cs" />
     <Compile Include="Amazon.SimpleNotificationService\Model\CreatePlatformApplicationRequest.cs" />
     <Compile Include="Amazon.SimpleNotificationService\Model\CreatePlatformApplicationResponse.cs" />
     <Compile Include="Amazon.SimpleNotificationService\Model\CreatePlatformApplicationResult.cs" />

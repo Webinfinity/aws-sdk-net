@@ -351,6 +351,8 @@ namespace Amazon.Runtime
                 {
                     LogResponse(asyncResult.Metrics, asyncResult.Request, HttpStatusCode.Unused);
                     shouldRetry = HandleIOException(asyncResult, httpResponse, ioe);
+                    if (!shouldRetry)
+                        asyncResult.Exception = ioe;
                 }
 
                 if (shouldRetry)
@@ -576,9 +578,10 @@ namespace Amazon.Runtime
                 {
                     if (wrappedRequest.ContentStream != null)
                     {
-                        if (wrappedRequest.OriginalRequest.IncludeSHA256Header)
+                        if (wrappedRequest.OriginalRequest.IncludeSHA256Header 
+                            && !wrappedRequest.Headers.ContainsKey(AWS4Signer.XAmzContentSha256))
                         {
-                            request.Headers["x-amz-content-sha256"] = wrappedRequest.ContentStreamHash;
+                            request.Headers[AWS4Signer.XAmzContentSha256] = wrappedRequest.ComputeContentStreamHash();
                         }
                         request.ContentLength = wrappedRequest.ContentStream.Length;
                     }
